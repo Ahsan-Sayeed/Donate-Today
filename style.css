@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 
-/* common codes */
+/* common tags */
 h1{
     font-family: sans-serif;
     font-style: normal;
@@ -14,17 +14,20 @@ h1{
     line-height: 79px;
     text-align: center;
     color: #FFFFFF;
+    text-transform: capitalize;
 }
 h2{
     font-weight: 700;
     font-size: 45px;
     color:#121212;
     text-align: center;
+    text-transform: capitalize;
 }
 h3{
     font-weight: 700;
     font-size: 30px;
     color: #707070;
+    text-transform: capitalize;
 }
 h4{
     font-style: normal;
@@ -32,6 +35,7 @@ h4{
     font-size: 24px;
     color: #121212;
     margin: 16px 0px;
+    text-transform: capitalize;
 }
 p{
     /* font-family: 'Poppins'; */
@@ -49,7 +53,25 @@ p{
     padding: 16px 12px;
     border-radius: 5px;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+.header,.donate-amount,
+.amount-box-container,
+.amount-box,
+.amount-input form,
+.donate-plan,
+.plan-card-container,
+.card-plan,
+.ads-container,
+.ads-body,
+.get-update-container,
+.update-form,
+.update-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /* end */
 
@@ -59,13 +81,8 @@ p{
     background-image:linear-gradient(transparent,#121212), url('images/donation1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: white;
     text-align: center;
-    text-transform: capitalize;
 }
 .header-text-container{
     width:826px;
@@ -85,13 +102,10 @@ p{
 .donate-amount{
     margin: 130px 330px;
     padding: 0 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .amount-box-container{
     width: 765px;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-bottom: 60px;
 }
@@ -100,19 +114,11 @@ p{
     height: 123px;
     background: #FAFAFA;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .active-box{
     border:2px solid #FF5959;
     background-color: #FFEEEE;
     color:#FF5959;
-}
-.amount-input form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .amount-input input[type=text]{
     border:2px solid transparent;
@@ -136,9 +142,6 @@ p{
 /* donate-plan */
 .donate-plan{
     margin: 130px 157px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .plan-heading{
     width: 691px;
@@ -146,7 +149,7 @@ p{
 }
 .plan-card-container{
     width: 100%;
-    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     margin-top: 50px;
 }
@@ -156,9 +159,6 @@ p{
     left: 157px;
     top: 1595.5px;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 32px 23px 54px;
     text-align: left;
 }
@@ -183,12 +183,37 @@ p{
 }
 /* end */
 
+/*advertisement*/
+.ads-body{
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 100px;
+    width: 100%;
+}
+.ads-documents{
+    width:493px;
+    height:374px;
+}
+.ads-documents h2,.ads-documents p{
+    text-align:left;
+    padding-left:0;
+}
+.ads-container img{
+    width:456px;
+    height:477px;
+    border-radius:5px;
+}
+
+.ads-reverse-order{
+    flex-direction: row-reverse;
+}
+/* end */
+
+
+/* update */
 .get-update-container{
     width: 809px;
     height: 388px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 130px auto;
 }
 .update-head{
@@ -200,21 +225,18 @@ p{
     background-color: #FFF4D6;
     width: 809px;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .update-form form{
     width: 432px;
     height: 48px;
-    display: flex;
-   justify-content: center;
+    flex-direction: row;
 }
 .update-form input[type=email]{
     flex:0.65;
     border-radius: 5px 0 0 5px;
     border:none;
+    height: 100%;
     padding: 14px 17px;
     outline: none;
     background-color: #D9D9D9;
@@ -228,8 +250,19 @@ p{
     font-weight: 500;
     border-radius: 0 5px 5px 0;
 }
+/* end */
 
+/* footer */
 footer{
    height:177px;
    background-color: #0B0D17;
+   text-align: center;
 }
+footer span{
+   color:white;
+   line-height: 5;
+}
+#beHumble{
+    font-size: 30px;
+}
+/* end */
